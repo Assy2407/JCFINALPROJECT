@@ -1,0 +1,73 @@
+/* STOP THE BULLYING*/
+body {
+    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fcolony.fandom.com%2Fwiki%2FRed_Hand&psig=AOvVaw24-4zHTR_bZ3Ffv7_vo6BP&ust=1620323769539000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPi8lMmOs_ACFQAAAAAdAAAAABAD");
+}
+
+h1 {
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: red;
+}
+
+/* Header 2 */
+h2 {
+    text-align:center;
+}
+/* first quote */
+.quote1 {
+    text-align:center;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left left middle middle right right' 
+    'footer footer footer footer footer footer';
+} 
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+}
